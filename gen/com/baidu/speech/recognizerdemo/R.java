@@ -75,26 +75,10 @@ public final class R {
         public static final int ic_launcher=0x7f02002f;
     }
     public static final class id {
-        public static final int btn=0x7f0a0006;
-        public static final int button=0x7f0a000c;
-        public static final int imageView=0x7f0a0000;
-        public static final int imageView2=0x7f0a0002;
-        public static final int setting=0x7f0a0008;
-        public static final int speech_tips=0x7f0a0003;
-        public static final int textView=0x7f0a000a;
-        public static final int textView2=0x7f0a0009;
-        public static final int textView3=0x7f0a000b;
-        public static final int tips_container=0x7f0a0004;
-        public static final int txtLog=0x7f0a0007;
-        public static final int txtResult=0x7f0a0005;
-        public static final int wave=0x7f0a0001;
+        public static final int my_test=0x7f0a0000;
     }
     public static final class layout {
-        public static final int bd_asr_popup_speech=0x7f030000;
-        public static final int bdspeech_digital_layout=0x7f030001;
-        public static final int bdspeech_suggestion_item=0x7f030002;
-        public static final int sdk2_api=0x7f030003;
-        public static final int slot=0x7f030004;
+        public static final int main=0x7f030000;
     }
     public static final class raw {
         public static final int bdspeech_recognition_cancel=0x7f050000;

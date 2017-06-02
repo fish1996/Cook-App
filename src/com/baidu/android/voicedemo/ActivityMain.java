@@ -1,104 +1,86 @@
 package com.baidu.android.voicedemo;
 
-import android.app.ListActivity;
+
+import com.baidu.speech.VoiceRecognitionService;
+import com.baidu.speech.recognizerdemo.R;
+
+import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.View;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
+import android.speech.RecognitionListener;
+import android.speech.SpeechRecognizer;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-public class ActivityMain extends ListActivity {
+public class ActivityMain extends Activity implements RecognitionListener {
     public static final String CATEGORY_SAMPLE_CODE = "com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE";
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {//³õÊ¼»¯
+    private SpeechRecognizer speechRecognizer;
+    private TextView text;
+    Intent intent;
+    protected void onCreate(Bundle savedInstanceState) {//ï¿½ï¿½Ê¼ï¿½ï¿½
         super.onCreate(savedInstanceState);
-
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        sp.edit().remove(Constant.EXTRA_INFILE).commit(); // infile²ÎÊıÓÃÓÚ¿ØÖÆÊ¶±ğÒ»¸öPCMÒôÆµÁ÷£¨»òÎÄ¼ş£©£¬Ã¿´Î½øÈë³ÌĞò¶¼½«¸ÃÖµÇå³ş£¬ÒÔ±ÜÃâÌåÑéÊ±Ã»ÓĞÊ¹ÓÃÂ¼ÒôµÄÎÊÌâ
-
-        setListAdapter(new SimpleAdapter(this, getData(), android.R.layout.simple_list_item_2,
-                new String[]{
-                        "title", "description"
-                }, new int[]{
-                android.R.id.text1, android.R.id.text2
-        }));
+        setContentView(R.layout.main);
+        // åˆ›å»ºè¯†åˆ«å™¨
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this, new ComponentName(this, VoiceRecognitionService.class));
+        // æ³¨å†Œç›‘å¬å™¨
+        speechRecognizer.setRecognitionListener(this);
+        text = (TextView)findViewById(R.id.my_test);
+        startASR();
     }
-
-    /**
-     * »ñÈ¡DemoÁĞ±í
-     *
-     * @return
-     */
-    private List<Map<String, Object>> getData() {
-        List<Map<String, Object>> myData = new ArrayList<Map<String, Object>>();
-
-        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-        mainIntent.addCategory(CATEGORY_SAMPLE_CODE);
-
-        PackageManager pm = getPackageManager();
-        List<ResolveInfo> list = pm.queryIntentActivities(mainIntent, 0);
-
-        if (null == list)
-            return myData;
-
-        int len = list.size();
-
-        for (int i = 0; i < len; i++) {
-            ResolveInfo info = list.get(i);
-            if (!getPackageName().equalsIgnoreCase(info.activityInfo.packageName)) {
-                continue;
-            }
-            CharSequence labelSeq = info.loadLabel(pm);
-            CharSequence description = null;
-            if (info.activityInfo.descriptionRes != 0) {
-                description = pm.getText(info.activityInfo.packageName,
-                        info.activityInfo.descriptionRes, null);
-            }
-
-            String label = labelSeq != null ? labelSeq.toString() : info.activityInfo.name;
-            addItem(myData,
-                    label,
-                    activityIntent(info.activityInfo.applicationInfo.packageName,
-                            info.activityInfo.name), description);
-        }
-        return myData;
+    
+    void startASR() {
+    	Toast.makeText(getApplicationContext(), "startASR",
+    		     Toast.LENGTH_SHORT).show();
+        intent = new Intent();
+        intent.putExtra("grammar", "asset:///baidu_speech_grammar.bsg");
+        bindParams(intent);
+        speechRecognizer.startListening(intent);
     }
-
-    private void addItem(List<Map<String, Object>> data, String name, Intent intent,
-                         CharSequence description) {
-        Map<String, Object> temp = new HashMap<String, Object>();
-        temp.put("title", name);
-        if (description != null) {
-            temp.put("description", description.toString());
-        }
-        temp.put("intent", intent);
-        data.add(temp);
+    void bindParams(Intent intent) {
+        // è®¾ç½®è¯†åˆ«å‚æ•°
     }
-
-    private Intent activityIntent(String pkg, String componentName) {
-        Intent result = new Intent();
-        result.setClassName(pkg, componentName);
-        return result;
+    public void onReadyForSpeech(Bundle params) {
+        // å‡†å¤‡å°±ç»ª
     }
-
     @Override
-    @SuppressWarnings("unchecked")
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        Map<String, Object> map = (Map<String, Object>) l.getItemAtPosition(position);
-
-        Intent intent = (Intent) map.get("intent");
-        startActivity(intent);
+    public void onBeginningOfSpeech() {
+    	Toast.makeText(getApplicationContext(), "Beginspeech",
+     		     Toast.LENGTH_SHORT).show();
+        // å¼€å§‹è¯´è¯å¤„ç†
     }
-
+    public void onRmsChanged(float rmsdB) {
+    	Toast.makeText(getApplicationContext(), "RmsChanged",
+     		     Toast.LENGTH_SHORT).show();
+            // éŸ³é‡å˜åŒ–å¤„ç†
+    }
+    public void onBufferReceived(byte[] buffer) {
+            // å½•éŸ³æ•°æ®ä¼ å‡ºå¤„ç†
+    }
+    public void onEndOfSpeech() {
+    	Toast.makeText(getApplicationContext(), "OnEndOfSpeech",
+      		     Toast.LENGTH_SHORT).show();
+        // è¯´è¯ç»“æŸå¤„ç†
+    }
+    public void onError(int error) {
+    	Toast.makeText(getApplicationContext(), "Error",
+   		     Toast.LENGTH_SHORT).show();
+        // å‡ºé”™å¤„ç†
+    }
+    public void onResults(Bundle results) {
+    	
+    	text.setText(results.toString());
+    	speechRecognizer.startListening(intent);
+        // æœ€ç»ˆç»“æœå¤„ç†
+    }
+    public void onPartialResults(Bundle partialResults) {
+        // ä¸´æ—¶ç»“æœå¤„ç†
+    }
+    public void onEvent(int eventType, Bundle params) {
+        // å¤„ç†äº‹ä»¶å›è°ƒ
+    }
 }
 
