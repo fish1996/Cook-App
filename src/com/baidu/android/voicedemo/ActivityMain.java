@@ -24,19 +24,12 @@ public class ActivityMain extends Activity implements RecognitionListener {
     protected void onCreate(Bundle savedInstanceState) {//��ʼ��
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        Intent intent=new Intent();
-        intent.setClass(ActivityMain.this, com.baidu.android.guidepage.ViewFlowActivity.class);
-        startActivityForResult(intent, 1);
         // 创建识别器
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this, new ComponentName(this, VoiceRecognitionService.class));
         // 注册监听器
         speechRecognizer.setRecognitionListener(this);
         text = (TextView)findViewById(R.id.my_test);
-        
-    }
-    
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    	startASR();
+        startASR();
     }
     
     void startASR() {

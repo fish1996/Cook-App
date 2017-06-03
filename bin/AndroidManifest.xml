@@ -34,24 +34,30 @@
             另外需要注意的是离线功能只是在线功能的“增强”，不能永久不联网使用（特别是首次使用）。
         -->
         <!-- 请填写真实的APP_ID API_KEY SECRET_KEY -->
-        <meta-data android:name="com.baidu.speech.APP_ID" android:value="6536447"/>
-        <meta-data android:name="com.baidu.speech.API_KEY" android:value="8MAxI5o7VjKSZOKeBzS4XtxO"/>
-        <meta-data android:name="com.baidu.speech.SECRET_KEY" android:value="Ge5GXVdGQpaxOmLzc8fOM8309ATCz9Ha"/>
+        <meta-data android:name="com.baidu.speech.APP_ID" android:value="9705609"/>
+        <meta-data android:name="com.baidu.speech.API_KEY" android:value="DufhfYlPhVmR3eeU3dCPLsGM"/>
+        <meta-data android:name="com.baidu.speech.SECRET_KEY" android:value="2713903904f496e6458710d22865eede"/>
 		<service android:name="com.baidu.speech.VoiceRecognitionService" android:exported="false" />
 
         <activity android:label="@string/app_name" android:name="com.baidu.android.guidepage.ViewFlowActivity"> 
          </activity>
+         
+        <activity android:name="com.baidu.tts.MainActivity">
+        </activity>
 
-
+        <activity android:name="com.baidu.android.guidepage.InitAcitivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.baidu.tts.ModelManagerActivity"/>
         <activity
                 android:name="com.baidu.android.voicedemo.ActivityMain"
                 android:configChanges="orientation|keyboardHidden|screenLayout"
                 android:theme="@android:style/Theme.DeviceDefault.Light"
                 android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>  
         </activity>
 
 

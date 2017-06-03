@@ -13,8 +13,8 @@ public final class R {
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f040000;
+        public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
         public static final int bd_asr_popup_bg=0x7f020000;
@@ -25,25 +25,51 @@ public final class R {
         public static final int page3=0x7f020005;
     }
     public static final class id {
-        public static final int common_userguide_btn_exit=0x7f070001;
-        public static final int common_userguide_image_imgView=0x7f070000;
-        public static final int my_test=0x7f070002;
-        public static final int userguide_btn_skip=0x7f070004;
-        public static final int viewflow=0x7f070003;
+        public static final int batchSpeak=0x7f060006;
+        public static final int common_userguide_btn_exit=0x7f060016;
+        public static final int common_userguide_image_imgView=0x7f060015;
+        public static final int downloadBytes=0x7f06001c;
+        public static final int downloadList=0x7f060012;
+        public static final int experienceBtn=0x7f060021;
+        public static final int getLocalFileInfo=0x7f06000f;
+        public static final int getLocalList=0x7f06000b;
+        public static final int getLocalListAvailable=0x7f06000d;
+        public static final int getModelDefault=0x7f060010;
+        public static final int getModelFilePath=0x7f060011;
+        public static final int getServerFileInfo=0x7f06000e;
+        public static final int getServerList=0x7f06000a;
+        public static final int getServerListAvailable=0x7f06000c;
+        public static final int input=0x7f060008;
+        public static final int listview=0x7f060014;
+        public static final int modelId=0x7f060019;
+        public static final int modelState=0x7f06001a;
+        public static final int my_test=0x7f06001e;
+        public static final int nextActivity=0x7f060007;
+        public static final int pause=0x7f060001;
+        public static final int play=0x7f060005;
+        public static final int progressbar=0x7f06001b;
+        public static final int resume=0x7f060002;
+        public static final int showText=0x7f060009;
+        public static final int speak=0x7f060000;
+        public static final int stop=0x7f060003;
+        public static final int synthesize=0x7f060004;
+        public static final int totalBytes=0x7f06001d;
+        public static final int useModel=0x7f060013;
+        public static final int userguide_btn_skip=0x7f060020;
+        public static final int viewflow=0x7f06001f;
+        public static final int voiceComposeBtn=0x7f060017;
+        public static final int voiceRecognizeBtn=0x7f060018;
     }
     public static final class layout {
-        public static final int common_userguide_imageitem=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int viewflow_main=0x7f030002;
-    }
-    public static final class raw {
-        public static final int bdspeech_recognition_cancel=0x7f040000;
-        public static final int bdspeech_recognition_error=0x7f040001;
-        public static final int bdspeech_recognition_start=0x7f040002;
-        public static final int bdspeech_recognition_success=0x7f040003;
-        public static final int bdspeech_speech_end=0x7f040004;
+        public static final int activity_main=0x7f030000;
+        public static final int activity_modelmanager=0x7f030001;
+        public static final int common_userguide_imageitem=0x7f030002;
+        public static final int init=0x7f030003;
+        public static final int list_item=0x7f030004;
+        public static final int main=0x7f030005;
+        public static final int viewflow_main=0x7f030006;
     }
     public static final class string {
-        public static final int app_name=0x7f060000;
+        public static final int app_name=0x7f050000;
     }
 }
