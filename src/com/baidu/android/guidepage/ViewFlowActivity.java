@@ -7,6 +7,7 @@ import org.taptwo.android.widget.ViewFlow.ViewSwitchListener;
 import com.baidu.speech.recognizerdemo.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -52,14 +53,20 @@ public class ViewFlowActivity extends Activity {
 			}
 		});
 		skipBtn.setOnClickListener(new TextView.OnClickListener(){//创建监听    
-            public void onClick(View v) {   
-            	finish();
+            public void onClick(View v) {
+//				finish();
+				Intent intent = new Intent();
+				intent.setClass(ViewFlowActivity.this, com.baidu.android.login.Login.class);
+				startActivity(intent);
             }
 		 });
 		
 		experienceBtn.setOnClickListener(new Button.OnClickListener(){//创建监听    
-            public void onClick(View v) {   
-            	finish();
+            public void onClick(View v) {
+				Intent intent = new Intent();
+				intent.setClass(ViewFlowActivity.this, com.baidu.android.login.Login.class);
+				startActivity(intent);
+//				finish();
             }
 		 });
 	}

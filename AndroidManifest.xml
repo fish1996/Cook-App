@@ -21,7 +21,8 @@
 
     <application
         android:icon="@drawable/icon"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:theme="@style/MyStyle">
 
         <!-- begin: baidu speech sdk-->
         <!--
@@ -39,17 +40,30 @@
         <meta-data android:name="com.baidu.speech.SECRET_KEY" android:value="2713903904f496e6458710d22865eede"/>
 		<service android:name="com.baidu.speech.VoiceRecognitionService" android:exported="false" />
 
-        <activity android:label="@string/app_name" android:name="com.baidu.android.guidepage.ViewFlowActivity"> 
+        <activity android:label="@string/app_name" android:name="com.baidu.android.guidepage.ViewFlowActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
          </activity>
          
         <activity android:name="com.baidu.tts.MainActivity">
         </activity>
 
+        <activity android:name="com.baidu.android.login.Login">
+        </activity>
+
+        <activity android:name="com.baidu.android.login.Register">
+        </activity>
+
+        <activity android:name="com.baidu.android.login.User">
+        </activity>
+
         <activity android:name="com.baidu.android.guidepage.InitAcitivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
         
         <activity android:name="com.baidu.tts.ModelManagerActivity"/>

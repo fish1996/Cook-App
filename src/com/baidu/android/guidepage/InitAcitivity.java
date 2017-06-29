@@ -21,6 +21,7 @@ public class InitAcitivity extends Activity {
 	    voiceRecognizeBtn.setOnClickListener(new Button.OnClickListener(){//创建监听    
             public void onClick(View v) {   
                 Intent intent1 = new Intent();
+//                intent1.setClass(InitAcitivity.this, com.baidu.android.login.User.class);
                 intent1.setClass(InitAcitivity.this, com.baidu.android.voicedemo.ActivityMain.class);
                 startActivity(intent1);
             }
@@ -30,6 +31,7 @@ public class InitAcitivity extends Activity {
 	    voiceComposeBtn.setOnClickListener(new Button.OnClickListener(){//创建监听    
             public void onClick(View v) {   
                 Intent intent2 = new Intent();
+//                intent2.setClass(InitAcitivity.this, com.baidu.android.login.Login.class);
                 intent2.setClass(InitAcitivity.this, com.baidu.tts.MainActivity.class);
                 startActivity(intent2);
             }

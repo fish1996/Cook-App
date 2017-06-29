@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/collectMain"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/collect_background">
+
+    <Button
+        android:id="@+id/collectRetButton"
+        android:text=""
+        android:gravity="center"
+        android:layout_width="35dp"
+        android:background="@drawable/reg_return"
+        android:layout_height="35dp" />
+
+    <EditText
+        android:id="@+id/classSearch"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/class_search"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:context=".MainActivity">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/collectOne1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+                <TextView android:layout_width="320dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="left"
+                    android:background="#f00"/>
+
+                <TextView android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left"
+                    android:background="#0f0"/>
+
+                <Button android:layout_width="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="left"
+                    android:background="#00f"
+                    android:layout_height="40dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/collectOne2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+                <TextView android:layout_width="320dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="left"
+                    android:background="#f00"/>
+
+                <TextView android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left"
+                    android:background="#0f0"/>
+
+                <Button android:layout_width="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="left"
+                    android:background="#00f"
+                    android:layout_height="40dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/TextButton2"
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/collect_one"/>
+
+            <TextView
+                android:id="@+id/TextButton3"
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/collect_one"/>
+
+            <TextView
+                android:id="@+id/TextButton4"
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/collect_one"/>
+
+            <TextView
+                android:id="@+id/TextButton5"
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/collect_one"/>
+
+            <TextView
+                android:id="@+id/TextButton6"
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/collect_one"/>
+
+            <TextView
+                android:id="@+id/TextButton7"
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/collect_one"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/H:/class2/test/Cook-App/res/layout/collect_main.xml -->

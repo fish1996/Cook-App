@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/landMain"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/land_background">
+
+    <EditText
+        android:id="@+id/landUser"
+        android:gravity="center"
+        android:layout_marginTop="235dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reg_user"/>
+
+    <EditText
+        android:id="@+id/landPassword"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reg_password"/>
+
+    <Button
+        android:id="@+id/landButton"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/land_button"/>
+
+    <Button
+        android:id="@+id/land_regButton"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="105dp"
+        android:background="@drawable/land_reg"
+        android:layout_height="20dp"
+        android:layout_width="180dp" />
+</LinearLayout><!-- From: file:/H:/class2/test/Cook-App/res/layout/land_main.xml -->

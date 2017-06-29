@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/classMain"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/class_background">
+
+    <Button
+        android:id="@+id/classRetButton"
+        android:text=""
+        android:gravity="center"
+        android:layout_width="35dp"
+        android:background="@drawable/reg_return"
+        android:layout_height="35dp" />
+
+    <EditText
+        android:id="@+id/classSearch"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/class_search"/>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp">
+
+        <TableRow>
+            <Button
+                android:id="@+id/landCake"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/class_cake"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+
+            <Button
+                android:id="@+id/landBreak"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/class_break"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/landBitcuits"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/class_biscuits"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+
+            <Button
+                android:id="@+id/landIce"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/class_ice"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/landDoug"
+                android:text=""
+                android:gravity="center"
+                android:background="@drawable/class_doughnut"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+
+            <Button
+                android:id="@+id/landPie"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/class_pie"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout><!-- From: file:/H:/class2/test/Cook-App/res/layout/classify_main.xml -->

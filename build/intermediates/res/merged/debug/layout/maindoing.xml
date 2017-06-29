@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/doing_background"
+    android:weightSum="1">
+
+    <Button
+        android:id="@+id/Doingguide"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:background="@drawable/doing_guide" />
+
+    <Button
+        android:id="@+id/Doingmarket"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/doing_market"
+        android:gravity="center"
+        android:text="" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/Doingtext"
+                android:layout_width="320dp"
+                android:layout_height="280dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:text="" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Doingstart"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/doing_start" />
+
+    <Button
+        android:id="@+id/Doingpause"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="175dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/doing_pause" />
+
+    <Button
+        android:id="@+id/Doingrestart"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="-45dp"
+        android:layout_marginLeft="280dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/doing_restart" />
+
+    <TextView
+        android:id="@+id/Doingsaying"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_width="200dp"
+        android:layout_height="30dp" />
+
+    <Button
+        android:id="@+id/Doingprevious"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:background="@drawable/doing_previous" />
+
+    <Button
+        android:id="@+id/Doingnext"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="260dp"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:background="@drawable/doing_next" />
+
+    <Button
+        android:id="@+id/Doingback"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@drawable/doing_back" />
+
+    <Button
+        android:id="@+id/Doingshare"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="230dp"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="@drawable/doing_share" />
+
+</LinearLayout>
+<!-- From: file:/H:/class2/test/Cook-App/res/layout/maindoing.xml -->

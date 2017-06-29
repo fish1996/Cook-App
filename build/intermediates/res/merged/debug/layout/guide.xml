@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/guide_main"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/Guidehead"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/guide_head" />
+
+    <Button
+        android:id="@+id/Guideperson"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/guide_person"/>
+
+    <Button
+        android:id="@+id/Guidecollect"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:background="@drawable/guide_collect"/>
+
+    <Button
+        android:id="@+id/Guidehistory"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/guide_history"/>
+
+    <Button
+        android:id="@+id/Guidesetup"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/guide_setup"/>
+
+    <Button
+        android:id="@+id/Guideback"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="23dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:background="@drawable/guide_back"/>
+
+    <Button
+        android:id="@+id/Guideloginout"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@drawable/guide_loginout"/>
+
+
+</LinearLayout><!-- From: file:/H:/class2/test/Cook-App/res/layout/guide.xml -->

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baidu.speech.recognizerdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for com.baidu.speech.recognizerdemo"
+        android:targetPackage="com.baidu.speech.recognizerdemo" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/MyStyle" >
+
+        <!-- begin: baidu speech sdk -->
+        <!--
+            离线功能指南：
+            1. 在百度语音开放平台注册应用，http://yuyin.baidu.com/app
+            2. 为您的应用的“申请离线授权页面”，填写程序包名
+            3. 在当前应用的AndroidManifest.xml中填写相应的APP_ID（或在代码中设置appid参数）
+            4. 根据场景下载并集成相应的资源，见http://yuyin.baidu.com/docs/asr/131和http://yuyin.baidu.com/asr/download
+
+            另外需要注意的是离线功能只是在线功能的“增强”，不能永久不联网使用（特别是首次使用）。
+        -->
+        <!-- 请填写真实的APP_ID API_KEY SECRET_KEY -->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="9705609" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="DufhfYlPhVmR3eeU3dCPLsGM" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="2713903904f496e6458710d22865eede" />
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.baidu.android.guidepage.ViewFlowActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.baidu.tts.MainActivity" >
+        </activity>
+        <activity android:name="com.baidu.android.login.Login" >
+        </activity>
+        <activity android:name="com.baidu.android.login.Register" >
+        </activity>
+        <activity android:name="com.baidu.android.login.User" >
+        </activity>
+        <activity android:name="com.baidu.android.guidepage.InitAcitivity" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name="com.baidu.tts.ModelManagerActivity" />
+        <activity
+            android:name="com.baidu.android.voicedemo.ActivityMain"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light" >
+        </activity>
+
+        <!--  -->
+
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+</manifest>

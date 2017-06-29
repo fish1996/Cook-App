@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/regMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reg_background"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/regUser"
+        android:gravity="center"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reg_user"/>
+
+    <EditText
+        android:id="@+id/regPassword1"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reg_password"/>
+
+    <EditText
+        android:id="@+id/regPassword2"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reg_password"/>
+
+    <Button
+        android:id="@+id/regButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/reg_button"
+        android:gravity="center"
+        android:text="" />
+
+</LinearLayout><!-- From: file:/H:/class2/test/Cook-App/res/layout/reg_main.xml -->

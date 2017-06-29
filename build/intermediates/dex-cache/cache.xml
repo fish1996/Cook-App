@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="H:\class2\test\Cook-App\libs\viewflow.jar"
+        jumboMode="false"
+        revision="25.0.3"
+        sha1="3727b6abc6126147984a202a695aee8d934743e6">
+        <dex dex="H:\class2\test\Cook-App\build\intermediates\pre-dexed\debug\viewflow-47f0ac591c92289a290b73a8417fa6132469ce0a.jar" />
+    </item>
+    <item
+        jar="H:\class2\test\Cook-App\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="25.0.3"
+        sha1="3b20dc871d179ba476082efe543dc1b38db46e30">
+        <dex dex="H:\class2\test\Cook-App\build\intermediates\pre-dexed\debug\android-support-v4-376cd9b259d8cc72760af525e7bea72257c48650.jar" />
+    </item>
+    <item
+        jar="H:\class2\test\Cook-App\libs\VoiceRecognition-2.1.20.jar"
+        jumboMode="false"
+        revision="25.0.3"
+        sha1="44148c0546fbd278516c9d243326d309ccaaf7a9">
+        <dex dex="H:\class2\test\Cook-App\build\intermediates\pre-dexed\debug\VoiceRecognition-2.1.20-1241955b60aaf6b420868e57af0e49f671d76c20.jar" />
+    </item>
+    <item
+        jar="H:\class2\test\Cook-App\libs\com.baidu.tts_2.3.0.jar"
+        jumboMode="false"
+        revision="25.0.3"
+        sha1="13821b9782a321df92a623074b28c8aee1f03348">
+        <dex dex="H:\class2\test\Cook-App\build\intermediates\pre-dexed\debug\com.baidu.tts_2.3.0-f4975a32d0b94ac101171ead5d1a72fd710d766d.jar" />
+    </item>
+
+</items>

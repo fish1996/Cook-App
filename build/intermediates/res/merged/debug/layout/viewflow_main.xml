@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.llc.view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+ 
+    <!-- 
+    	如果想使用app:sidebuffer="5"
+    	必须要有文档说明：xmlns:app="http://schemas.android.com/apk/res/your.applaction.package.here"
+     -->
+    
+	<org.taptwo.android.widget.ViewFlow
+        android:id="@+id/viewflow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </org.taptwo.android.widget.ViewFlow>
+
+    <TextView
+        android:id="@+id/userguide_btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:text="跳过"
+        android:textColor="#ff0000ff"
+        android:textSize="16sp" />
+    
+     <Button
+            android:id="@+id/experienceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:height = "40dp"
+            android:width = "150dp"
+            android:text="立即体验"
+            android:background = "#6699FF"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="500dp"
+            android:textSize="12dp" />
+    
+</RelativeLayout><!-- From: file:/H:/class2/test/Cook-App/res/layout/viewflow_main.xml -->
